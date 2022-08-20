@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FILE DOES NOT REQUIRE MODIFICATION -->
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<ComponentGroup Id="ProductComponents">
+			<!-- Register which components the ProductComponents consist of. -->
+			<ComponentRef Id="PluginRegistryEntry" />
+		</ComponentGroup>
+
+		<DirectoryRef Id="INSTALLFOLDER" FileSource="!(loc.FileSource)">
+			<Component Id="PluginRegistryEntry" Guid="!(loc.RegistryId)">
+
+				<!-- Registry entry required for Impulse.Dashboard to identify the application. -->
+				<!-- DO NOT CHANGE -->
+				<RegistryValue
+					Id="RegShortcutKey"
+					Root="HKCU"
+					Type="string"
+					Value="[INSTALLFOLDER]"
+					Key="SOFTWARE\Tutorials With Gary\Plugins"
+					KeyPath="yes"
+					Name="!(loc.ProductName)"/>				
+
+			</Component>
+		</DirectoryRef>
+		
+	</Fragment>
+</Wix>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+	<String Id="CompanyName">Tutorials With Gary</String>
+	
+	<String Id="ProductName_x64">Impulse Plugin (x64)</String>
+	<String Id="ProductName">Impulse Plugin</String>
+	
+	<String Id="Language">1033</String>
+	
+	<!-- Installer UI Constants -->
+	<String Id="Description">A base Impulse Dashboard plugin template.</String>
+	<String Id="Comment">Use responsibly.</String>
+	<String Id="Keywords">Dashboard,Impulse,Tutorials,Gary,Plugin</String>
+	<String Id="DowngradeMessage">A newer version of Impulse Plugin is already installed.</String>
+	
+	<!-- Published project source, this should be the pulish folder of your assembly that has an IApplcation or IPlugin implementation. -->
+	<String Id="FileSource">$(var.Impulse.Application.TargetDir)\win-x64\publish\</String>
+
+	<!-- The following Guids must be replaced with your own uniquie GUIDs. -->
+	<String Id="RegistryId">{AFE49135-A3F3-4EE5-A280-CAECC03B23DA}</String>
+	<String Id="UpgradeCode">{754BDFEB-E012-4E40-AEC2-B08D63B58553}</String>
+	<String Id="ProductId">{1F313FCF-12CE-46AC-89E4-3DF3B67185C3}</String>
+	
+</WixLocalization>

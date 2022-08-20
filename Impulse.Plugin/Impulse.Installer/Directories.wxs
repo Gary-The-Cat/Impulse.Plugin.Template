@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- FILE DOES NOT REQUIRE MODIFICATION -->
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			
+			<!-- C:\Program File\[ProductName] Alias -->
+			<Directory Id="ProgramFiles64Folder">
+				<Directory Id="INSTALLFOLDER" Name="!(loc.ProductName)"/>
+			</Directory>
+		
+		</Directory>
+	</Fragment>
+</Wix>
